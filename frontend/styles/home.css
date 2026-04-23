@@ -9,9 +9,9 @@ body, html {
     background-image: url('../images/intro-header.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 100%;
     width: 95%;
-    margin: 0 auto;
+    margin: 0 auto; 
     position: relative;
     border-radius: 20px;
     padding-top: 15vh;
@@ -78,6 +78,12 @@ body, html {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.14);
 }
 
 .stat-number {
@@ -165,8 +171,8 @@ body, html {
 }
 
 @keyframes scrollLeft {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .fade-in-up {
@@ -240,7 +246,7 @@ body, html {
 .marquee-track {
     display: flex;
     width: max-content;
-    animation: scrollLeft 25s linear infinite;
+    animation: scrollLeft 16s linear infinite;
 }
 
 .marquee-track:hover {
@@ -250,7 +256,7 @@ body, html {
 .marquee-content {
     display: flex;
     gap: 30px;
-    padding-right: 30px;
+    flex-shrink: 0;
 }
 
 .project-img {
@@ -262,10 +268,179 @@ body, html {
     transition: transform 0.3s ease;
 }
 
+.project-img:last-child {
+    margin-right: 30px;
+}
+
 .project-img:hover {
     transform: scale(1.02);
     cursor: pointer;
 }
+
+
+.shop-section {
+    background-color: #ffffff; /* Nền trắng sạch sẽ */
+}
+
+
+.shop-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.shop-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+
+.shop-text-content {
+    padding: 20px 0;
+}
+
+
+.shop-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+
+.shop-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+.shop-features li {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.shop-features i {
+    font-size: 1.1rem;
+}
+
+
+.btn-shop {
+    padding: 12px 35px;
+    border-radius: 8px; 
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.btn-shop:hover {
+    background-color: #333;
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* Hình ảnh */
+.shop-img {
+    width: 100%;
+    height: 700px; 
+    object-fit: cover; 
+    border-radius: 16px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+    transition: transform 0.4s ease;
+}
+
+.shop-img:hover {
+    transform: scale(1.02); 
+}
+
+/*painting process*/
+.main-title {
+    font-family: 'Inria Serif', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 1rem;
+}
+
+.step-item {
+    display: block;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.step-item:hover {
+    background-color: #e9ecef;
+    transform: translateX(5px);
+    border-left-color: #261b66;
+    text-decoration: none;
+    color: #333;
+}
+
+.step-item.router-link-active {
+    background-color: #c0cad6;
+    color: white;
+    border-left-color: #35335d;
+}
+
+.step-title-text {
+    font-family: 'Inria Serif', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.step-desc-text {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.details-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.details-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+/* Animation cho router transitions */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+/**/
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.5rem;
@@ -281,5 +456,30 @@ body, html {
     }
     .about-text {
         text-align: left;
+    }
+    .shop-img {
+        height: 350px;
+        margin-bottom: 30px;
+    }
+    .shop-text-content {
+        text-align: left !important; 
+    }
+    .shop-features {
+        text-align: left;
+    }
+    .main-title {
+        font-size: 2.5rem;
+    }
+    .step-item {
+        padding: 15px;
+    }
+    .step-title-text {
+        font-size: 1rem;
+    }
+    .details-content {
+        padding: 20px;
+    }
+    .details-title {
+        font-size: 1.8rem;
     }
 }

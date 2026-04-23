@@ -11,27 +11,28 @@
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!--css-->
+    <link href="./styles/nav-bar.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" >ANSANG PAINT</a>
+            <a class="navbar-brand" href="./1-home.html" >ANSANG PAINT</a>
             <ul class="nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Interior Paint</a>
+                    <a class="nav-link active" aria-current="page" href="./4-interior-shop.html">Interior Paint</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Exterior Paint</a>
+                    <a class="nav-link" href="./3-exterior-shop.html">Exterior Paint</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Industrial Paint</a>
+                    <a class="nav-link" href="./5-industrial-shop.html">Industrial Paint</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="./3-contact.html">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sign In</a>
+                    <a class="nav-link" href="./2-sign-in.html">Sign In</a>
                 </li>
             </ul>
         </div>
@@ -43,7 +44,7 @@
             <h1 class="hero-title" style="font-family: 'Inria Serif', serif;">ANSANG PAINT</h1>
             <p class="hero-subtitle">Go ahead and say just a little more about what you do.</p>
             <div class="hero-buttons mt-4">
-                <a href="#" class="btn btn-custom-dark me-3">Shop with us</a>
+                <a href="#shop-section" class="btn btn-custom-dark me-3">Shop with us</a>
                 <a href="#" class="btn btn-custom-light">Contact Us</a>
             </div>
         </div>
@@ -125,25 +126,151 @@
 
         <div class="marquee-wrapper">
             <div class="marquee-track">
-                
                 <div class="marquee-content">
                     <img src="./images/project-1.jpg" alt="Project 1" class="project-img">
                     <img src="./images/project-2.jpg" alt="Project 2" class="project-img">
                     <img src="./images/project-3.png" alt="Project 3" class="project-img">
                     <img src="./images/project-4.jpg" alt="Project 4" class="project-img">
-                </div>
-
-                <div class="marquee-content">
+                </div><div class="marquee-content">
                     <img src="./images/project-1.jpg" alt="Project 1" class="project-img">
                     <img src="./images/project-2.jpg" alt="Project 2" class="project-img">
                     <img src="./images/project-3.png" alt="Project 3" class="project-img">
                     <img src="./images/project-4.jpg" alt="Project 4" class="project-img">
                 </div>
-                
             </div>
         </div>
     </section>
 
+    <!--shop with us-->
+    <section class="shop-section py-5">
+        <div class="container py-5">
+            
+            <div class="text-center mb-5 pb-4 fade-in-up">
+                <h2 class="shop-main-title" id="shop-section" style="font-family: 'Inria Serif', serif;">Shopping with us</h2>
+                <p class="shop-subtitle text-muted mx-auto">
+                    Explore our premium collections tailored for every surface. Discover the perfect colors to protect and beautify your spaces.
+                </p>
+            </div>
+
+            <div class="row align-items-center mb-5 pb-5 gx-5">
+                <div class="col-md-6 mb-4 mb-md-0 slide-in-left">
+                    <div class="shop-text-content pe-md-4">
+                        <h3 class="shop-title" style="font-family: 'Inria Serif', serif;">Interior paint shop</h3>
+                        <p class="shop-desc">
+                            Transform your living spaces with our premium interior paints. Formulated for rich, lasting color and a flawless finish that makes your house feel like home.
+                        </p>
+                        <ul class="shop-features list-unstyled mb-4">
+                            <li><i class="bi bi-check-circle-fill text-dark me-2"></i> Easy to clean & washable</li>
+                            <li><i class="bi bi-check-circle-fill text-dark me-2"></i> Low VOC & almost odorless</li>
+                            <li><i class="bi bi-check-circle-fill text-dark me-2"></i> Anti-bacterial properties</li>
+                        </ul>
+                        <a href="#" class="btn btn-dark btn-shop" style="font-family: 'Inria Serif', serif;">Shop Interior</a>
+                    </div>
+                </div>
+                <div class="col-md-6 slide-in-right">
+                    <img src="./images/interior-intro.jpg" alt="Interior Paint" class="img-fluid shop-img">
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-5 pb-5 gx-5">
+                <div class="col-md-6 slide-in-left">
+                    <img src="./images/exterior-intro.jpg" alt="Exterior Paint" class="img-fluid shop-img">
+                </div>
+                <div class="col-md-6 mb-4 mb-md-0 slide-in-right">
+                    <div class="shop-text-content ps-md-4 text-md-start">
+                        <h3 class="shop-title" style="font-family: 'Inria Serif', serif;">Exterior paint shop</h3>
+                        <p class="shop-desc">
+                            Protect and beautify your home's facade with premium exterior coatings. Our products resist UV, mold, and weathering so your walls keep their color and finish longer.
+                        </p>
+                        <ul class="shop-features list-unstyled mb-4">
+                            <li><i class="bi bi-check-circle-fill text-dark me-2"></i> UV & weather resistant</li>
+                            <li><i class="bi bi-check-circle-fill text-dark me-2"></i> Anti-fungal and algae protection</li>
+                            <li><i class="bi bi-check-circle-fill text-dark me-2"></i> 10-year color durability</li>
+                        </ul>
+                        <a href="#" class="btn btn-dark btn-shop" style="font-family: 'Inria Serif', serif;">Shop Exterior</a>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="row align-items-center mb-5 pb-5 gx-5">
+                <div class="col-md-6 mb-4 mb-md-0 slide-in-left">
+                    <div class="shop-text-content pe-md-4">
+                        <h3 class="shop-title" style="font-family: 'Inria Serif', serif;">Industrial paint shop</h3>
+                        <p class="shop-desc">
+                            Meet the demands of your industrial projects with our robust and durable industrial paints. Engineered for performance in harsh environments.
+                        </p>
+                        <ul class="shop-features list-unstyled mb-4">
+                            <li><i class="bi bi-check-circle-fill text-dark me-2"></i> Easy to clean & washable</li>
+                            <li><i class="bi bi-check-circle-fill text-dark me-2"></i> Low VOC & almost odorless</li>
+                            <li><i class="bi bi-check-circle-fill text-dark me-2"></i> Anti-bacterial properties</li>
+                        </ul>
+                        <a href="#" class="btn btn-dark btn-shop" style="font-family: 'Inria Serif', serif;">Shop Industrial</a>
+                    </div>
+                </div>
+                <div class="col-md-6 slide-in-right">
+                    <img src="./images/industrial-intro.png" alt="Industrial Paint" class="img-fluid shop-img">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--painting process-->
+    <div id="app"></div>
+
+    <template id="app-tpl">
+        <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="main-title" style="font-family: 'Inria Serif', serif;">Painting process</h1>
+            <p class="text-muted">Learn how our painting process helps you achieve professional results</p>
+        </div>
+
+        <div class="row gx-5">
+            <div class="col-lg-5 mb-4">
+            <step-list :steps="steps"></step-list>
+            </div>
+            <div class="col-lg-7">
+            <router-view></router-view>
+            </div>
+        </div>
+        </div>
+    </template>
+
+    <template id="step-list-tpl">
+        <div>
+        <router-link 
+            v-for="s in steps" 
+            :key="s.step_id" 
+            :to="'/step/' + s.step_id"
+            class="step-item"
+        >
+            <div class="step-title-text" style="font-family: 'Inria Serif', serif;">STEP {{ s.step_id }}: {{ s.title }}</div>
+            <p class="step-desc-text">{{ s.short_desc }}</p>
+        </router-link>
+        </div>
+    </template>
+
+    <template id="overview-tpl">
+        <div class="details-content text-center mt-5">
+        <h3 style="font-family: 'Inria Serif', serif;">
+            Please select a step on the left to see the details.
+        </h3>
+        </div>
+    </template>
+
+    <template id="step-detail-tpl">
+        <div v-if="step" class="details-content">
+        <h2 class="details-title">STEP {{ step.step_id }}: {{ step.title }}</h2>
+        <hr style="opacity: 0.1; margin-bottom: 25px;">
+        <div v-html="step.content" style="line-height: 1.8; color: #444;"></div>
+        </div>
+        <div v-else>
+        <h3>Step not found!</h3>
+        </div>
+    </template>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <script src="./javascript/home.js" ></script>
 </body>
 </html>
