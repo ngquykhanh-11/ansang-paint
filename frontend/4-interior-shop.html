@@ -10,15 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!--css-->
     <link href="./styles/nav-bar.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/interior.css">
 </head>
 <body>
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./1-home.html" >ANSANG PAINT</a>
-            <ul class="nav ms-auto">
+    <header>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./1-home.html">ANSANG PAINT</a>
+                <ul class="nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./4-interior-shop.html">Interior Paint</a>
                 </li>
@@ -29,7 +31,7 @@
                     <a class="nav-link" href="./5-industrial-shop.html">Industrial Paint</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./3-contact.html">Contact</a>
+                    <a class="nav-link" href="./6-contact.html">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./2-sign-in.html">Sign In</a>
@@ -37,5 +39,97 @@
             </ul>
         </div>
     </nav>
+    </header>
+
+    <main>
+        <!--hero section-->
+        <section class="hero-section d-flex flex-column align-items-center">
+        <div class="hero-content text-center">
+            <h1 class="hero-title" style="font-family: 'Inria Serif', serif;">INTERIOR PAINT</h1>
+            <p class="hero-subtitle">Go ahead and say just a little more about what you do.</p>
+            <div class="hero-buttons mt-4">
+                <a href="#shop-section" class="btn btn-custom-dark me-3">Shop with us</a>
+                <a href="#" class="btn btn-custom-light">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section py-5">
+        <div class="container py-4">
+            <h2 class="about-main-title text-center mb-5 fade-in-up" style="font-family: 'Inria Serif', serif;">Our Interior Paint</h2>
+            
+            <div class="row align-items-center gx-5">
+                <div class="col-lg-7 mb-4 mb-lg-0 slide-in-left">
+                    <div class="about-image-wrapper">
+                        <img src="./images/interior-shop.png" alt="AnSang Paint Jotun Studio" class="img-fluid about-img">
+                    </div>
+                </div>
+                
+                <div class="col-lg-5 slide-in-right">
+                    <h3 class="about-subtitle" style="font-family: 'Inria Serif', serif;">Introduction</h3>
+                    <p class="about-text">
+                        Welcome to AnSang Paint, your trusted partner in bringing color and life to your spaces. As a premier distributor of world-class brands like Jotun and Dulux, we pride ourselves on delivering not just paint, but comprehensive coating solutions tailored to your vision.
+                    </p>
+                    <p class="about-text">
+                        With years of expertise in the industry, our mission is to provide top-quality products, professional color consultation, and exceptional customer service. Whether you are renovating a cozy home or undertaking a large commercial project, AnSang Paint ensures durability, aesthetic brilliance, and a flawless finish every time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop-section" class="interior-shop-area" style="background-color: #F8FBF4; padding-top: 60px; padding-bottom: 80px;">
+        <div class="container">
+
+        <div class="shop-card-wrapper position-relative">
+            
+            <div class="custom-search-wrapper">
+                <div class="bg-white rounded-pill d-flex align-items-center p-2 shadow-sm">
+                    <input type="text" class="form-control border-0 bg-transparent shadow-none px-4" placeholder="Option/Line at sale...">
+                    
+                    <div class="vr text-muted" style="height: 25px; opacity: 0.2;"></div>
+                    
+                    <button class="btn btn-link text-muted"><i class="bi bi-person-fill"></i></button>
+                    <button class="btn btn-link text-muted"><i class="bi bi-search"></i></button>
+                    <button class="btn btn-link text-success"><i class="bi bi-1-circle-fill"></i></button>
+                    
+                    <button class="btn btn-search-action rounded-pill px-4 ms-2">Search</button>
+                </div>
+            </div>
+
+            <div class="shop-main-card">
+                
+                <div class="d-flex flex-wrap gap-2 mb-5">
+                    <button class="btn btn-filter active"><i class="bi bi-check2 me-1"></i> Newest Product</button>
+                    <button class="btn btn-filter">Featured Products</button>
+                    <button class="btn btn-filter">Price descending</button>
+                    <button class="btn btn-filter">Your Favourite</button>
+                </div>
+
+                <div class="row row-cols-2 row-cols-md-4 g-4">
+                    <div class="col">
+                        <div class="product-card">
+                            <div class="product-img-placeholder"><i class="bi bi-image"></i></div>
+                            <h6 class="product-title mt-3 mb-1">Text</h6>
+                            <p class="product-price mb-0">$0</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card">
+                            <div class="product-img-placeholder"><i class="bi bi-image"></i></div>
+                            <h6 class="product-title mt-3 mb-1">Text</h6>
+                            <p class="product-price mb-0">$0</p>
+                        </div>
+                    </div>
+                    </div>
+                
+            </div> 
+        </div> 
+    </div>
+</section>
+
+ 
+
+
 </body>
 </html>
