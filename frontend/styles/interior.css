@@ -2,24 +2,36 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Instrument Sans', sans-serif;
+    background-color: #F8FBF4;
 }
 
 .hero-section {
     background-image: url('../images/interior-header.jpg');
     background-size: cover;
     background-position: center;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto; 
+    background-repeat: no-repeat;
+    height: 150vh; 
+    min-height: 500px;
     position: relative;
-    padding-top: 15vh;
+    width: 100%;
+    padding-top: 130px;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.15); 
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
-    color: #fdfdfd;
+    z-index: 2; 
     padding: 0 20px;
 }
 
@@ -166,7 +178,7 @@ body, html {
     z-index: 10;
 }
 
-/* 1. THANH SEARCH LIGHT BLUE */
+/* search */
 .custom-search-wrapper {
     border-radius: 60px;
     color: #0d0d0d;
@@ -196,17 +208,16 @@ body, html {
     background-color: #ffffff;
     margin-top: -70px;
     border-radius: 12px;
-    border: 1px solid #777; 
     padding: 70px 40px 40px; 
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
 }
 
-/* 3. CÁC NÚT LỌC (FILTERS) */
+/* filter */
 .btn-filter {
-    background-color: #f4f4f4; /* Màu xám nhạt */
+    background-color: #f4f4f4; 
     color: #555;
     border: none;
-    border-radius: 6px; /* Bo góc nhẹ (không bo tròn xoe) theo ảnh */
+    border-radius: 6px;
     padding: 8px 16px;
     font-size: 0.9rem;
     font-weight: 500;
@@ -214,44 +225,82 @@ body, html {
 }
 
 .btn-filter.active, .btn-filter:hover {
-    background-color: #222; /* Chuyển thành màu đen khi active/hover */
+    background-color: #222; 
     color: #ffffff;
 }
 
-/* 4. GRID SẢN PHẨM */
+/* product card grid */
 .grid-title {
     font-size: 1.5rem;
     color: #ccc; 
     font-weight: 600;
 }
 
+
 .product-card {
-    cursor: pointer;
+    border: none; 
+    border-radius: 12px; 
+    background-color: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-img-placeholder {
-    background-color: #ebebeb;
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .img-wrapper {
+    padding: 40px; 
+    background-color: #fcfcfc; 
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    text-align: center;
+}
+
+.product-card .card-img-top {
+    height: 180px; 
+    width: auto; 
+    object-fit: contain; 
+    margin: 0 auto;
+}
+
+.product-card .category-text {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.product-card .card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.product-card .card-text {
+    font-size: 0.85rem;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+.product-card .btn-outline-dark {
     border-radius: 8px;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    color: #ccc;
-    transition: transform 0.3s ease;
+    font-weight: 500;
+    transition: all 0.3s;
 }
 
-.product-card:hover .product-img-placeholder {
-    transform: scale(1.02);
+.product-card .btn-btn-secondary:hover {
+    background-color: #212529;
+    border-color: #212529;
 }
 
-/* Responsive: Xử lý hiển thị trên điện thoại */
+
 @media (max-width: 768px) {
     .shop-main-card {
-        padding: 60px 20px 20px; /* Thu hẹp lề trên di động */
+        padding: 60px 20px 20px; 
     }
     .custom-search-wrapper {
-        width: 90%; /* Thanh search nhỏ lại một chút */
+        width: 90%; 
     }
     .shop-card-wrapper {
         margin-top: -30px; 
