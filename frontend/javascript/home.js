@@ -74,7 +74,6 @@ const StepList = {
   template: '#step-list-tpl'
 };
 
-// step overview component
 const StepOverview = {
   template: '#overview-tpl'
 };
@@ -101,9 +100,6 @@ const AppLayout = {
   }
 };
 
-// ==========================================
-// 3. CẤU HÌNH VUE ROUTER
-// ==========================================
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHashHistory(),
   routes: [
@@ -112,14 +108,11 @@ const router = VueRouter.createRouter({
   ]
 });
 
-// ==========================================
-// 4. KHỞI TẠO VÀ CHẠY ỨNG DỤNG
-// ==========================================
 const app = Vue.createApp(AppLayout);
 
-// Đăng ký component con
+
 app.component('step-list', StepList);
 
-// Kích hoạt router và nhúng vào HTML
+
 app.use(router);
 app.mount('#app');
